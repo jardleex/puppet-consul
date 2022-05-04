@@ -141,7 +141,6 @@ Puppet::Type.newtype(:consul_prepared_query) do
 
   newparam(:node_meta) do
     desc 'List of user-defined key/value pairs to filter on NodeMeta'
-    defaultto {}
     validate do |value|
       raise ArgumentError, 'NodeMeta type must be a hash' unless value.is_a?(Hash)
     end
@@ -149,7 +148,6 @@ Puppet::Type.newtype(:consul_prepared_query) do
 
   newparam(:service_meta) do
     desc 'List of user-defined key/value pairs to filter on ServiceMeta'
-    defaultto {}
     validate do |value|
       raise ArgumentError, 'ServiceMeta type must be a hash' unless value.is_a?(Hash)
     end
