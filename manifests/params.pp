@@ -68,6 +68,7 @@ class consul::params {
       $shell = '/usr/sbin/nologin'
     }
     'RedHat': {
+      $bash_completion = false
       $shell = '/sbin/nologin'
     }
     'Debian': {
@@ -79,9 +80,11 @@ class consul::params {
       $shell = '/sbin/nologin'
     }
     'OpenSuSE': {
+      $bash_completion = false
       $shell = '/usr/sbin/nologin'
     }
     /SLE[SD]/: {
+      $bash_completion = false
       $shell = '/usr/sbin/nologin'
     }
     default: {
