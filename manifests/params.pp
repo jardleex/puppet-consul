@@ -75,6 +75,7 @@ class consul::params {
       $shell = '/usr/sbin/nologin'
     }
     'Archlinux': {
+      $bash_completion = false
       $shell = '/sbin/nologin'
     }
     'OpenSuSE': {
